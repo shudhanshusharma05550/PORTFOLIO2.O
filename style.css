@@ -1,0 +1,610 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 200vh;
+    background-color: #000;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    padding: 40px 100px;
+    z-index: 100000;
+}
+
+header.sticky {
+    padding: 5px 100px;
+    background: #fff;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+header .navbar {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+header .navbar li{
+    position: relative;
+    list-style: none;
+    transition: 0.6s;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: 0.6s;
+}
+
+header a:hover {
+    color : orange;
+}
+
+header .navbar a:hover {
+    text-decoration: underline;
+}
+
+.action-btn {
+    border-radius: 20px;
+    background-color: orange;
+    width: 6rem;
+    font-size: 1rem;
+    border: 2px solid orange;
+    color: white;
+    cursor: pointer;
+    transition: 0.6s;
+    text-align: center;
+}
+
+.action-btn:hover {
+    scale: 1.1;
+    color: #fff;
+}
+
+header .toggle_btn {
+    position: relative;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    background-color: #fff;
+}
+header .logo:hover {
+    scale: 1.1;
+}
+
+.hamburger {
+    position: relative;
+    display: none;
+    width: 30px;
+    cursor: pointer;
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+}
+
+.hamburger .bar, .hamburger:after, .hamburger:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    margin: 6px 0px;
+    transition: 0.4s;
+}
+
+.hamburger.is-active:before {
+    transform: rotate(-45deg) translate(-2px, 6px);
+}
+
+.hamburger.is-active:after {
+    transform: rotate(45deg) translate(-6px, -11px);
+}
+.hamburger.is-active .bar {
+    opacity: 0;
+}
+
+.dropdown_menu {
+    position: fixed;
+    top: 75px;
+    right: 2rem;
+    width: 300px;
+    height: 0px;
+    display: none;
+    z-index: 100000;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open {
+    height: 300px;
+}
+
+.dropdown_menu li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown_menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: 0.6s;
+}
+
+.dropdown_menu a:hover {
+    color: orange;
+    text-decoration: underline;
+}
+
+.dropdown_menu .action-btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: url('wp6412485.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    justify-content: center;
+    /*animation: change 10s infinite ease-in-out;*/
+}
+
+header.sticky ul li a {
+    color: #000;
+    font-weight: 500;
+}
+
+header.sticky .logo {
+    color: #000;
+    font-weight: 500;
+}
+
+
+.banner {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.banner .para {
+    color: greenyellow;
+    animation: move1 3s;
+    
+}
+.banner img{
+    cursor: pointer;
+    transition: 0.6s;
+    animation: rotate 3s;
+}
+@keyframes rotate {
+    from {
+      transform: rotate(0deg);
+      opacity: 0;
+    }
+    to {
+      transform: rotate(359deg);
+      opacity: 1;
+    }
+}
+.banner img:hover {
+    scale: 1.1;
+    transform: rotate(360deg);
+    transition: 10s;
+}
+
+.banner .para .title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin: 5%;
+}
+
+.banner .para .thought {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #fff;
+}
+.banner .btn-2 {
+    width: 12rem;
+    height: 4rem;
+    color: #000;
+    background-color: greenyellow;
+    border: 2px solid white;
+    font-size: 2rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.6s;
+    animation: move1 3s;
+}
+
+.banner .btn-2:hover {
+    border: 2px solid greenyellow;
+    color: greenyellow;
+    background: transparent;
+    font-weight: 500;
+    border-radius: 20px;
+}
+
+@keyframes move1 {
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+#skills{
+    background-color: black;
+    opacity: 0.8;
+}
+#skills ul{
+    list-style: none;
+    color: white;
+    padding: 2rem;
+}
+#skills ul li{
+    text-decoration: none;
+    padding: 1rem;
+    color: white;
+    border-radius: 1rem;
+    transition: all 0.2s ease-out;
+    animation: skillss 5s 1;
+}
+@keyframes skills {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+#skills ul li:hover{
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+.meter{
+    width: 1rem;
+    height: 1rem;
+    border-radius: 1rem;
+    background-color: black;
+    transition: width 1s;
+}
+#skill-1:hover .meter{
+    width: 90%;
+}
+#skill-2:hover .meter{
+    width: 80%;
+}
+#skill-3:hover .meter{
+    width: 80%;
+}
+#skill-4:hover .meter{
+    width: 80%;
+}
+#skill-5:hover .meter{
+    width: 85%;
+}
+#skill-6:hover .meter{
+    width: 90%;
+}
+
+#projects {
+    color: #000;
+    background-color: #fff;
+}
+.projects {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+.project {
+    margin-bottom: 60px;
+    width: 30%;
+    height: 100%;
+    border-radius: 5px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.2);
+    overflow: hidden;
+    margin-top: 5%;
+    transition: 0.6s;
+}
+.project img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: opacity 0.2s ease-in-out;
+}
+
+#projects .projects .project a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.project:hover {
+    opacity: 0.6;
+    scale: 1.1;
+    box-shadow: 0 0 6px rgba(0,0,0,0.2);
+}
+
+#experience {
+    color: #fff;
+    background-color: #000;
+}
+
+.experiences {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    margin-bottom: 60px;
+    margin-top: 5%;
+}
+
+.experience {
+    width: 20%;
+    height: 100%;
+    border-radius: 5px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.2);
+    overflow: hidden;
+    margin-top: 5%;
+    transition: 0.6s;
+}
+
+.experience img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: 0.6s ease-in-out;
+}
+
+#experience .experiences .experience a {
+    text-decoration: none;
+    color: #fff;
+    text-align: left;
+}
+
+.experience:hover {
+    opacity: 0.6;
+    scale: 1.1;
+    box-shadow: 0 0 6px #fff;
+}
+
+.experience div {
+    transition: 0.6s ease-in-out;
+}
+
+.experience div:hover {
+    text-decoration: underline;
+    color: orange;
+}
+
+footer {
+    background-color: rgb(50, 44, 44);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.form {
+    text-align: center;
+    margin-top: 5%;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    margin-bottom: 50px;
+    transition: 0.6s ease-in-out;
+    cursor: pointer;
+    border-radius: 20px;
+    padding: 1rem;
+}
+
+.form-1 {
+    padding: 2rem;
+    display: none;
+}
+
+.form-1.showMore {
+    display: block;
+}
+
+.form.extra {
+    border-radius: 0px;
+    padding: 1rem;
+    font-weight: 700;
+}
+
+.form-1 input {
+    width: 16rem;
+    height: 3rem;
+    text-align: center;
+    background-color: transparent;
+    color: white;
+    margin-bottom: 1rem;
+    border: 2px solid white;
+    border-radius: 20px;
+    transition: 0.6s ease-in-out;
+}
+
+.form-1 input:hover {
+    border-radius: 0px;
+    border: 2px double white;
+}
+
+.form-1 button {
+    text-align: center;
+    background-color: transparent;
+    color: white;
+    margin-bottom: 1rem;
+    border: 2px solid white;
+    border-radius: 20px;
+    transition: 0.6s ease-in-out;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.form-1 button:hover {
+    background-color: white;
+    border: 2px solid rgb(50, 44, 44);
+    color: rgb(50, 44, 44);
+    font-weight: 700;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footerlogo {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.footerlogo li {
+    margin: 0 1rem;
+}
+
+.footerlogo a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.footerlogo a i {
+    font-size: 2.1rem;
+    width: 1rem;
+    transition: color .4s ease;
+}
+
+.footerlogo a:hover {
+    color: aqua;
+}
+
+.footerline {
+    width: 50%;
+}
+
+.footerend {
+    font-size: 15px;
+    margin-top: 1%;
+    font-family: verdana;
+}
+.img-box1{
+    width: 2rem;
+    height: 2rem;
+}
+
+.img-box2{
+    width: 2rem;
+    height: 2rem;
+}
+.img-box3{
+    width: 2rem;
+    height: 2rem;
+}
+.img-box4{
+    width: 2rem;
+    height: 2rem;
+}
+/*Responsive Design */
+@media screen and (max-width: 992px) {
+    header {
+        padding: 2rem;
+    }
+    header .navbar, header .action-btn {
+        display: none;
+    }
+
+    header .hamburger {
+        display: block;
+    }
+
+    .dropdown_menu {
+        display: block;
+    }
+}
+@media screen and (max-width: 715px) {
+    .banner {
+        flex-direction: column;
+    }
+    .para {
+        margin-top: 7%;
+    }
+    .banner .para .title {
+        margin: 0%;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 576px){
+    .dropdown_menu {
+        left: 2rem;
+        width: unset;
+    }
+
+    .banner {
+        padding: 9rem;
+    }
+    .banner .thought{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .experiences, .projects {
+        padding: 20px;
+    }
+    .experience, .project {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .experience, .project {
+        width: 100%;
+    }
+}
